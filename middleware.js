@@ -12,3 +12,8 @@ export default function middleware(req) {
     },
   });
 }
+
+// Apply middleware to all routes so every response gets the security headers.
+export const config = {
+  matcher: '/:path*',
+};
